@@ -5,7 +5,7 @@
 #include "../src/folder.h"
 #include "../src/file.h"
 
-/*TEST (, FileSearchItsSelf)
+TEST (, FileSearchItsSelf)
 {
   Node * a_out = new File("./test_data/folder/a.out");
   ASSERT_EQ("a.out",a_out->find("a.out"));
@@ -40,7 +40,7 @@ TEST (, SearchFolderInFolder)
   Node * folder = new Folder("./test_data/folder");
   test_data->add(folder);
   ASSERT_EQ("./folder",test_data->find("folder"));
-}*/
+}
 
 TEST (, SearchFileInMoreFolder)
 {

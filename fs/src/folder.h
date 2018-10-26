@@ -83,7 +83,7 @@ public:
             //cout << "VV" << ccnt << endl;
             //cout <<"VV " <<_children[0]->cntNodePath(nodeName) <<endl;
             level = 0;
-            if (ccnt == 0)
+            if (ccnt == 0) //不會跑，ccnt一定大於0
             ans = stringArray[0].erase(0, _nodeFullPath.length());
             else
             {
@@ -91,15 +91,13 @@ public:
                 for (int i=0 ; i<ccnt ; i++){
                     tempans = stringArray[i].erase(0, _nodeFullPath.length());
                     // cout << "stringArray[" << i << "] " << 
-                    if (i!=0)
-                        ans += dot + tempans;
-                    else
-                        ans += tempans;
+                    ans += dot + tempans;
+
                     if (i != ccnt-1)
                         ans += slashN;
                 }
             }
-            return dot + ans;  
+            return ans;  
         }
     }
     string name()
